@@ -15,333 +15,346 @@ oqo-model:Metric a owl:Class ;
     rdfs:label "Metric" ;
     rdfs:comment "A sample metric." .
 
+oqo-model:ontology-set-metadata a owl:Class ;
+    rdfs:label "Ontology Set Metadata"@en ;
+    rdfs:comment "Metadata describing the results of processing over a set of ontologies"@en ;
 
-oqo-model:abox_axiom_count a dqv:Metric ;
+oqo:ontology-count a owl:DatatypeProperty;
+    rdfs:domain oqo-model:ontology-set-metadata ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Ontology count"@en .
+
+oqo:failed-count a owl:DatatypeProperty ;
+    rdfs:domain oqo-model:ontology-set-metadata ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Failed count"@en .
+
+oqo-model:abox-axiom-count a dqv:Metric ;
     skos:prefLabel "ABox Axiom Count"@en ;
     skos:definition "Number of axioms in the ABox"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:annotation_property_count a dqv:Metric ;
+oqo-model:annotation-property-count a dqv:Metric ;
     skos:prefLabel "Annotation Property Count"@en ;
     skos:definition "Number of annotation properties"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:assert_n_subclass_avg a dqv:Metric ;
+oqo-model:assert-n-subclass-avg a dqv:Metric ;
     skos:prefLabel "Average Asserted Subclasses"@en ;
     skos:definition "Average number of (asserted) subclasses per class"@en ;
     dqv:expectedDataType xsd:double ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:assert_n_superclass_avg a dqv:Metric ;
+oqo-model:assert-n-superclass-avg a dqv:Metric ;
     skos:prefLabel "Average Asserted Superclasses"@en ;
     skos:definition "Average number of (asserted) superclasses per class"@en ;
     dqv:expectedDataType xsd:double ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:ax_complexrhs_count a dqv:Metric ;
+oqo-model:ax-complexrhs-count a dqv:Metric ;
     skos:prefLabel "Complex RHS Axiom Count"@en ;
     skos:definition "Number of axioms with a complex right hand side"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:axiom_count a dqv:Metric ;
+oqo-model:axiom-count a dqv:Metric ;
     skos:prefLabel "Total Axiom Count"@en ;
     skos:definition "Number of axioms"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:axiom_length_max a dqv:Metric ;
+oqo-model:axiom-length-max a dqv:Metric ;
     skos:prefLabel "Max Axiom Length"@en ;
     skos:definition "Longest axiom in terms of number of entities used (including duplicate uses)."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:axiom_type_count a dqv:Metric ;
+oqo-model:axiom-type-count a dqv:Metric ;
     skos:prefLabel "Axiom Type Count"@en ;
     skos:definition "Number of axioms of a specific type, such as SubClassOf"@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:axiom_types a dqv:Metric ;
+oqo-model:axiom-types a dqv:Metric ;
     skos:prefLabel "Axiom Types Presence"@en ;
     skos:definition "Indicates the presence of an axiom type in the ontology."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:certain_cycle a dqv:Metric ;
+oqo-model:certain-cycle a dqv:Metric ;
     skos:prefLabel "Definite Cycle Detection"@en ;
     skos:definition "If true, there is a definite cycle in the ontology. If false, cyclicity is unknown (experimental)."@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:cycleDetection .
+    dqv:inDimension oqo:cycle-detection .
 
-oqo-model:class_count a dqv:Metric ;
+oqo-model:class-count a dqv:Metric ;
     skos:prefLabel "Class Count"@en ;
     skos:definition "Number of classes in the ontology"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:class_sgl_subcl_count a dqv:Metric ;
+oqo-model:class-sgl-subcl-count a dqv:Metric ;
     skos:prefLabel "Superclass with Multiple Subclasses Count"@en ;
     skos:definition "Number of super-classes which have more than one subclass."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 oqo-model:constructs a dqv:Metric ;
     skos:prefLabel "Logical Constructs Used"@en ;
     skos:definition "Logical constructs used"@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:dataproperty_count a dqv:Metric ;
+oqo-model:dataproperty-count a dqv:Metric ;
     skos:prefLabel "Data Property Count"@en ;
     skos:definition "Number of distinct data properties."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:datatypes_builtin a dqv:Metric ;
+oqo-model:datatypes-builtin a dqv:Metric ;
     skos:prefLabel "Built-in Datatypes Used"@en ;
     skos:definition "Datatypes used from the built-in datatype map (like XSD schema datatypes)."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:datatypes_count a dqv:Metric ;
+oqo-model:datatypes-count a dqv:Metric ;
     skos:prefLabel "Datatype Count"@en ;
     skos:definition "Total number of distinct datatypes."@en ;
     dqv:expectedDataType xsd:integer .
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:dt_builtin_count a dqv:Metric ;
+oqo-model:dt-builtin-count a dqv:Metric ;
     skos:prefLabel "Built-in Datatype Count"@en ;
     skos:definition "Total number of distinct built-in datatypes."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:dt_notbuiltin_count a dqv:Metric ;
+oqo-model:dt-notbuiltin-count a dqv:Metric ;
     skos:prefLabel "Custom Datatype Count"@en ;
     skos:definition "Total number of distinct custom (not built-in) datatypes."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:gci_count a dqv:Metric ;
+oqo-model:gci-count a dqv:Metric ;
     skos:prefLabel "General Class Inclusion (GCI) Count"@en ;
     skos:definition "Total count of GCI axioms."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:gci_hidden_count a dqv:Metric ;
+oqo-model:gci-hidden-count a dqv:Metric ;
     skos:prefLabel "Hidden GCI Count"@en ;
     skos:definition "Total count of hidden GCIs."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:individual_count a dqv:Metric ;
+oqo-model:individual-count a dqv:Metric ;
     skos:prefLabel "Individual Count"@en ;
     skos:definition "Number of individuals."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:instance_per_class_avg a dqv:Metric ;
+oqo-model:instance-per-class-avg a dqv:Metric ;
     skos:prefLabel "Average Individuals per Class"@en ;
     skos:definition "Average number of individuals per class."@en ;
     dqv:expectedDataType xsd:double ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:namespace_axiom_count a dqv:Metric ;
+oqo-model:namespace-axiom-count a dqv:Metric ;
     skos:prefLabel "Namespace Axiom Count"@en ;
     skos:definition "Number of axioms using at least one term in a namespace."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:namespace_entity_count a dqv:Metric ;
+oqo-model:namespace-entity-count a dqv:Metric ;
     skos:prefLabel "Namespace Entity Count"@en ;
     skos:definition "Number of distinct entities used from a namespace."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:logical_axiom_count a dqv:Metric ;
+oqo-model:logical-axiom-count a dqv:Metric ;
     skos:prefLabel "Logical Axiom Count"@en ;
     skos:definition "Number of logical axioms in ontology"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:most_freq_concept a dqv:Metric ;
+oqo-model:most-freq-concept a dqv:Metric ;
     skos:prefLabel "Most Frequent Concept"@en ;
     skos:definition "Most frequently used class."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:multiple_inheritance_count a dqv:Metric ;
+oqo-model:multiple-inheritance-count a dqv:Metric ;
     skos:prefLabel "Multiple Inheritance Class Count"@en ;
     skos:definition "Number of classes with multiple inheritance."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:named_supercl_count_max a dqv:Metric ;
+oqo-model:named-supercl-count-max a dqv:Metric ;
     skos:prefLabel "Max Named Superclasses"@en ;
     skos:definition "Maximum number of named superclasses."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:obj_property_count a dqv:Metric ;
+oqo-model:obj-property-count a dqv:Metric ;
     skos:prefLabel "Object Property Count"@en ;
     skos:definition "Number of object properties."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:ontology_anno_count a dqv:Metric ;
+oqo-model:ontology-anno-count a dqv:Metric ;
     skos:prefLabel "Ontology Annotation Count"@en ;
     skos:definition "Number of ontology annotations."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
-oqo-model:ontology_id a dqv:Metric ;
+oqo-model:ontology-id a dqv:Metric ;
     skos:prefLabel "Ontology ID"@en ;
     skos:definition "The ontology id."@en ;
     dqv:expectedDataType xsd:anyURI ;
-    dqv:inDimension oqo:ontologyMetadataDimension .
+    dqv:inDimension oqo:ontology-metadata-dimension .
 
-oqo-model:owl2_dl a dqv:Metric ;
+oqo-model:owl2-dl a dqv:Metric ;
     skos:prefLabel "OWL2 DL Compliance"@en ;
     skos:definition "Does the ontology correspond to the OWL2 DL profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
-oqo-model:owl2_el a dqv:Metric ;
+oqo-model:owl2-el a dqv:Metric ;
     skos:prefLabel "OWL2 EL Compliance"@en ;
     skos:definition "Does the ontology correspond to the OWL2 EL profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
-oqo-model:owl2_ql a dqv:Metric ;
+oqo-model:owl2-ql a dqv:Metric ;
     skos:prefLabel "OWL2 QL Compliance"@en ;
     skos:definition "Does the ontology correspond to the OWL2 QL profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
-oqo-model:owl2_rl a dqv:Metric ;
+oqo-model:owl2-rl a dqv:Metric ;
     skos:prefLabel "OWL2 RL Compliance"@en ;
     skos:definition "Does the ontology correspond to the OWL2 RL profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
 oqo-model:owl2 a dqv:Metric ;
     skos:prefLabel "OWL2 Full Compliance"@en ;
     skos:definition "Does the ontology correspond to the OWL2 Full profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
-oqo-model:owl2dl_profile_violation a dqv:Metric ;
+oqo-model:owl2dl-profile-violation a dqv:Metric ;
     skos:prefLabel "OWL2 DL Profile Violation Count"@en ;
     skos:definition "Counts of OWL2 DL profile violations."@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:OWL2Compliance .
+    dqv:inDimension oqo:owl2-compliance .
 
-oqo-model:rbox_axiom_count a dqv:Metric ;
+oqo-model:rbox-axiom-count a dqv:Metric ;
     skos:prefLabel "RBOX Axiom Count"@en ;
     skos:definition "How many axioms in the RBOX?"@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 oqo-model:rdfs a dqv:Metric ;
     skos:prefLabel "RDFS Compliance"@en ;
     skos:definition "Does the ontology correspond to the RDFS profile?"@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:rdfsCompliance .
+    dqv:inDimension oqo:rdfs-compliance .
 
-oqo-model:rule_count a dqv:Metric ;
+oqo-model:rule-count a dqv:Metric ;
     skos:prefLabel "Rule Count"@en ;
     skos:definition "Number of SWRL rules used."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:signature_entity_count a dqv:Metric ;
+oqo-model:signature-entity-count a dqv:Metric ;
     skos:prefLabel "Signature Entity Count"@en ;
     skos:definition "Total number of entities in signature, including classes and individuals."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 oqo-model:syntax a dqv:Metric ;
     skos:prefLabel "Ontology Syntax"@en ;
     skos:definition "What serialisation is used for the ontology?"@en ;
     dqv:expectedDataType xsd:string ;
-    dqv:inDimension oqo:ontologyRepresentation;
+    dqv:inDimension oqo:ontology-representation;
 
-oqo-model:tautology_count a dqv:Metric ;
+oqo-model:tautology-count a dqv:Metric ;
     skos:prefLabel "Tautology Count"@en ;
     skos:definition "Number of tautological axioms."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:tbox_axiom_count a dqv:Metric ;
+oqo-model:tbox-axiom-count a dqv:Metric ;
     skos:prefLabel "TBOX Axiom Count"@en ;
     skos:definition "Number of TBOX axioms (without RBOX)."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:tbox_nominals a dqv:Metric ;
+oqo-model:tbox-nominals a dqv:Metric ;
     skos:prefLabel "TBOX Nominals Count"@en ;
     skos:definition "Number of TBOX axioms with nominals."@en ;
     dqv:expectedDataType xsd:boolean ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:tboxrbox_axiom_count a dqv:Metric ;
+oqo-model:tboxrbox-axiom-count a dqv:Metric ;
     skos:prefLabel "TBOX+RBOX Axiom Count"@en ;
     skos:definition "Number of TBOX axioms (with RBOX)."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
-oqo-model:undecl_entity_count a dqv:Metric ;
+oqo-model:undecl-entity-count a dqv:Metric ;
     skos:prefLabel "Undeclared Entity Count"@en ;
     skos:definition "Number of undeclared entities."@en ;
     dqv:expectedDataType xsd:integer ;
-    dqv:inDimension oqo:ontologySize .
+    dqv:inDimension oqo:ontology-size .
 
 
 
 
-oqo:OWL2Compliance a dqv:Dimension ;
+oqo:owl2-compliance a dqv:Dimension ;
     skos:prefLabel "Profile Compliance"@en ;
     skos:definition "Dimension measuring the compliance of the ontology with different OWL2 profiles (DL, EL, QL, RL, Full)."@en ;
     dqv:inCategory oqo:compliance .
 
-oqo:ontologySize a dqv:Dimension ;
+oqo:ontology-size a dqv:Dimension ;
     skos:prefLabel "Ontology Size"@en ;
     skos:definition "Measures the size of the ontology in terms of axioms and entities."@en ;
     dqv:inCategory oqo:structuralQuality .
 
-oqo:cycleDetection a dqv:Dimension ;
+oqo:cycle-detection a dqv:Dimension ;
     skos:prefLabel "Cycle Detection"@en ;
     skos:definition "Dimension that measures the presence or absence of cycles in the ontology."@en ;
     dqv:inCategory oqo:structuralQuality .
 
-oqo:ontologyMetadataDimension a dqv:Dimension ;
+oqo:ontology-metadata-dimension a dqv:Dimension ;
     skos:prefLabel "Ontology Metadata"@en ;
     skos:definition "Dimension that measures key metadata characteristics of the ontology, such as its ID."@en ;
     dqv:inCategory oqo:ontologyMetadata .
 
-oqo:rdfsCompliance a dqv:Dimension ;
+oqo:rdfs-compliance a dqv:Dimension ;
     skos:prefLabel "RDFS Compliance"@en ;
     skos:definition "Dimension measuring the compliance of the ontology with the RDFS profile."@en ;
     dqv:inCategory oqo:compliance .
 
-oqo:ontologyRepresentation a dqv:Dimension ;
+oqo:ontology-representation a dqv:Dimension ;
     skos:prefLabel "Ontology Representation"@en ;
     skos:definition "Dimension measuring the representation format of the ontology, including serialization and syntax."@en ;
     dqv:inCategory oqo:representation.
 
 
 
-oqo:ontologyMetadata a dqv:Category ;
+oqo:ontology-metadata a dqv:Category ;
     skos:prefLabel "Ontology Metadata"@en ;
     skos:definition "Category that groups dimensions related to the metadata of the ontology, such as its ID and other identifying features."@en .
 
@@ -349,7 +362,7 @@ oqo:compliance a dqv:Category ;
     skos:prefLabel "Compliance"@en ;
     skos:definition "Category that groups dimensions measuring the ontology's compliance."@en ;
 
-oqo:structuralQuality a dqv:Category ;
+oqo:structural-quality a dqv:Category ;
     skos:prefLabel "Structural Quality"@en ;
     skos:definition "Category that groups dimensions measuring size and structural complexity of an ontology. This category includes aspects like the number of axioms, entities, and logical constructs in the ontology."@en ;
 
