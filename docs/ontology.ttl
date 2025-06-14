@@ -1,0 +1,599 @@
+@prefix : <http://purl.org/oqo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/oqo#> .
+
+<http://purl.org/oqo> rdf:type owl:Ontology ;
+                       owl:versionIRI <http://purl.org/oqo/version/1.0.0> ;
+                       <http://purl.org/dc/terms/description> "A DQV-based ontology to describe the quality of ontologies, including metrics and dimensions."@en ;
+                       <http://purl.org/dc/terms/title> "Ontology Quality Ontology"@en ;
+                       rdfs:seeAlso <https://www.w3.org/ns/dqv> ;
+                       owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dqv#expectedDataType
+<http://www.w3.org/ns/dqv#expectedDataType> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dqv#inCategory
+<http://www.w3.org/ns/dqv#inCategory> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dqv#inDimension
+<http://www.w3.org/ns/dqv#inDimension> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/oqo/failed-count
+<http://purl.org/oqo/failed-count> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://purl.org/oqo/model#ontology-set-metadata> ;
+                                   rdfs:range xsd:integer ;
+                                   rdfs:label "Failed count"@en .
+
+
+###  http://purl.org/oqo/ontology-count
+<http://purl.org/oqo/ontology-count> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://purl.org/oqo/model#ontology-set-metadata> ;
+                                     rdfs:range xsd:integer ;
+                                     rdfs:label "Ontology count"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/oqo/model#ontology-set-metadata
+<http://purl.org/oqo/model#ontology-set-metadata> rdf:type owl:Class ;
+                                                  rdfs:comment "Metadata describing the results of processing over a set of ontologies"@en ;
+                                                  rdfs:label "Ontology Set Metadata"@en .
+
+
+###  http://www.w3.org/ns/dqv#Category
+<http://www.w3.org/ns/dqv#Category> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
+<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/oqo/compliance
+<http://purl.org/oqo/compliance> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/dqv#Category> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Category that groups dimensions measuring the ontology's compliance."@en ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance"@en .
+
+
+###  http://purl.org/oqo/cycle-detection
+<http://purl.org/oqo/cycle-detection> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/dqv#Dimension> ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Dimension that measures the presence or absence of cycles in the ontology."@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Cycle Detection"@en ;
+                                      <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/structuralQuality> .
+
+
+###  http://purl.org/oqo/ontology-metadata
+<http://purl.org/oqo/ontology-metadata> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/dqv#Category> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Category that groups dimensions related to the metadata of the ontology, such as its ID and other identifying features."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Metadata"@en .
+
+
+###  http://purl.org/oqo/ontology-metadata-dimension
+<http://purl.org/oqo/ontology-metadata-dimension> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/ns/dqv#Dimension> ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Dimension that measures key metadata characteristics of the ontology, such as its ID."@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Metadata"@en ;
+                                                  <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/ontologyMetadata> .
+
+
+###  http://purl.org/oqo/ontology-representation
+<http://purl.org/oqo/ontology-representation> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/dqv#Dimension> ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Dimension measuring the representation format of the ontology, including serialization and syntax."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Representation"@en ;
+                                              <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/representation> .
+
+
+###  http://purl.org/oqo/ontology-size
+<http://purl.org/oqo/ontology-size> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/dqv#Dimension> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Measures the size of the ontology in terms of axioms and entities."@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Size"@en ;
+                                    <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/structuralQuality> .
+
+
+###  http://purl.org/oqo/ontologyMetadata
+<http://purl.org/oqo/ontologyMetadata> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/oqo/owl2-compliance
+<http://purl.org/oqo/owl2-compliance> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/dqv#Dimension> ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Dimension measuring the compliance of the ontology with different OWL2 profiles (DL, EL, QL, RL, Full)."@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Profile Compliance"@en ;
+                                      <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/compliance> .
+
+
+###  http://purl.org/oqo/rdfs-compliance
+<http://purl.org/oqo/rdfs-compliance> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/dqv#Dimension> ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Dimension measuring the compliance of the ontology with the RDFS profile."@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "RDFS Compliance"@en ;
+                                      <http://www.w3.org/ns/dqv#inCategory> <http://purl.org/oqo/compliance> .
+
+
+###  http://purl.org/oqo/representation
+<http://purl.org/oqo/representation> rdf:type owl:NamedIndividual ,
+                                              <http://www.w3.org/ns/dqv#Category> ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Category that groups dimensions related to the representation and structure of the ontology, including syntax and serialization."@en ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Representation"@en .
+
+
+###  http://purl.org/oqo/structural-quality
+<http://purl.org/oqo/structural-quality> rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/ns/dqv#Category> ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "Category that groups dimensions measuring size and structural complexity of an ontology. This category includes aspects like the number of axioms, entities, and logical constructs in the ontology."@en ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Structural Quality"@en .
+
+
+###  http://purl.org/oqo/structuralQuality
+<http://purl.org/oqo/structuralQuality> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/oqo/model#abox-axiom-count
+<http://purl.org/oqo/model#abox-axiom-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Number of axioms in the ABox"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ABox Axiom Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#annotation-property-count
+<http://purl.org/oqo/model#annotation-property-count> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/ns/dqv#Metric> ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Number of annotation properties"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation Property Count"@en ;
+                                                      <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                      <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#assert-n-subclass-avg
+<http://purl.org/oqo/model#assert-n-subclass-avg> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/ns/dqv#Metric> ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Average number of (asserted) subclasses per class"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Average Asserted Subclasses"@en ;
+                                                  <http://www.w3.org/ns/dqv#expectedDataType> xsd:double ;
+                                                  <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#assert-n-superclass-avg
+<http://purl.org/oqo/model#assert-n-superclass-avg> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Average number of (asserted) superclasses per class"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Average Asserted Superclasses"@en ;
+                                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:double ;
+                                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#ax-complexrhs-count
+<http://purl.org/oqo/model#ax-complexrhs-count> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dqv#Metric> ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Number of axioms with a complex right hand side"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Complex RHS Axiom Count"@en ;
+                                                <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#axiom-count
+<http://purl.org/oqo/model#axiom-count> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/dqv#Metric> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Number of axioms"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Total Axiom Count"@en ;
+                                        <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                        <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#axiom-length-max
+<http://purl.org/oqo/model#axiom-length-max> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Longest axiom in terms of number of entities used (including duplicate uses)."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Max Axiom Length"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#axiom-type-count
+<http://purl.org/oqo/model#axiom-type-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Number of axioms of a specific type, such as SubClassOf"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Axiom Type Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#axiom-types
+<http://purl.org/oqo/model#axiom-types> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/dqv#Metric> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Indicates the presence of an axiom type in the ontology."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Axiom Types Presence"@en ;
+                                        <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                        <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#certain-cycle
+<http://purl.org/oqo/model#certain-cycle> rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/ns/dqv#Metric> ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "If true, there is a definite cycle in the ontology. If false, cyclicity is unknown (experimental)."@en ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Definite Cycle Detection"@en ;
+                                          <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                          <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/cycle-detection> .
+
+
+###  http://purl.org/oqo/model#class-count
+<http://purl.org/oqo/model#class-count> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/dqv#Metric> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Number of classes in the ontology"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Class Count"@en ;
+                                        <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                        <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#class-sgl-subcl-count
+<http://purl.org/oqo/model#class-sgl-subcl-count> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/ns/dqv#Metric> ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Number of super-classes which have more than one subclass."@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Superclass with Multiple Subclasses Count"@en ;
+                                                  <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                  <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#constructs
+<http://purl.org/oqo/model#constructs> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/dqv#Metric> ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Logical constructs used"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Logical Constructs Used"@en ;
+                                       <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                       <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#dataproperty-count
+<http://purl.org/oqo/model#dataproperty-count> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/dqv#Metric> ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Number of distinct data properties."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Property Count"@en ;
+                                               <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                               <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#datatypes-builtin
+<http://purl.org/oqo/model#datatypes-builtin> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/dqv#Metric> ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Datatypes used from the built-in datatype map (like XSD schema datatypes)."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Built-in Datatypes Used"@en ;
+                                              <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                              <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#datatypes-count
+<http://purl.org/oqo/model#datatypes-count> rdf:type owl:NamedIndividual ,
+                                                     <http://www.w3.org/ns/dqv#Metric> ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of distinct datatypes."@en ;
+                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Datatype Count"@en ;
+                                            <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                            <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#dt-builtin-count
+<http://purl.org/oqo/model#dt-builtin-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Total number of distinct built-in datatypes."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Built-in Datatype Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#dt-notbuiltin-count
+<http://purl.org/oqo/model#dt-notbuiltin-count> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dqv#Metric> ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Total number of distinct custom (not built-in) datatypes."@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Custom Datatype Count"@en ;
+                                                <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#gci-count
+<http://purl.org/oqo/model#gci-count> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/dqv#Metric> ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Total count of GCI axioms."@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "General Class Inclusion (GCI) Count"@en ;
+                                      <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                      <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#gci-hidden-count
+<http://purl.org/oqo/model#gci-hidden-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Total count of hidden GCIs."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Hidden GCI Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#individual-count
+<http://purl.org/oqo/model#individual-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Number of individuals."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Individual Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#instance-per-class-avg
+<http://purl.org/oqo/model#instance-per-class-avg> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/dqv#Metric> ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Average number of individuals per class."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Average Individuals per Class"@en ;
+                                                   <http://www.w3.org/ns/dqv#expectedDataType> xsd:double ;
+                                                   <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#logical-axiom-count
+<http://purl.org/oqo/model#logical-axiom-count> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dqv#Metric> ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Number of logical axioms in ontology"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Logical Axiom Count"@en ;
+                                                <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#most-freq-concept
+<http://purl.org/oqo/model#most-freq-concept> rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/ns/dqv#Metric> ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Most frequently used class."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Most Frequent Concept"@en ;
+                                              <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                              <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#multiple-inheritance-count
+<http://purl.org/oqo/model#multiple-inheritance-count> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/ns/dqv#Metric> ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Number of classes with multiple inheritance."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Multiple Inheritance Class Count"@en ;
+                                                       <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                       <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#named-supercl-count-max
+<http://purl.org/oqo/model#named-supercl-count-max> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Maximum number of named superclasses."@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Max Named Superclasses"@en ;
+                                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#namespace-axiom-count
+<http://purl.org/oqo/model#namespace-axiom-count> rdf:type owl:NamedIndividual ,
+                                                           <http://www.w3.org/ns/dqv#Metric> ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Number of axioms using at least one term in a namespace."@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Namespace Axiom Count"@en ;
+                                                  <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                                  <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#namespace-entity-count
+<http://purl.org/oqo/model#namespace-entity-count> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/dqv#Metric> ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Number of distinct entities used from a namespace."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Namespace Entity Count"@en ;
+                                                   <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                                   <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#obj-property-count
+<http://purl.org/oqo/model#obj-property-count> rdf:type owl:NamedIndividual ,
+                                                        <http://www.w3.org/ns/dqv#Metric> ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Number of object properties."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Object Property Count"@en ;
+                                               <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                               <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#ontology-anno-count
+<http://purl.org/oqo/model#ontology-anno-count> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dqv#Metric> ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Number of ontology annotations."@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Annotation Count"@en ;
+                                                <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#ontology-id
+<http://purl.org/oqo/model#ontology-id> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/dqv#Metric> ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "The ontology id."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology ID"@en ;
+                                        <http://www.w3.org/ns/dqv#expectedDataType> xsd:anyURI ;
+                                        <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-metadata-dimension> .
+
+
+###  http://purl.org/oqo/model#owl2
+<http://purl.org/oqo/model#owl2> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/dqv#Metric> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the OWL2 Full profile?"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 Full Compliance"@en ;
+                                 <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                 <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#owl2-dl
+<http://purl.org/oqo/model#owl2-dl> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the OWL2 DL profile?"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 DL Compliance"@en ;
+                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#owl2-el
+<http://purl.org/oqo/model#owl2-el> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the OWL2 EL profile?"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 EL Compliance"@en ;
+                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#owl2-ql
+<http://purl.org/oqo/model#owl2-ql> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the OWL2 QL profile?"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 QL Compliance"@en ;
+                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#owl2-rl
+<http://purl.org/oqo/model#owl2-rl> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/dqv#Metric> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the OWL2 RL profile?"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 RL Compliance"@en ;
+                                    <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                    <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#owl2dl-profile-violation
+<http://purl.org/oqo/model#owl2dl-profile-violation> rdf:type owl:NamedIndividual ,
+                                                              <http://www.w3.org/ns/dqv#Metric> ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Counts of OWL2 DL profile violations."@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "OWL2 DL Profile Violation Count"@en ;
+                                                     <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                                     <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/owl2-compliance> .
+
+
+###  http://purl.org/oqo/model#rbox-axiom-count
+<http://purl.org/oqo/model#rbox-axiom-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "How many axioms in the RBOX?"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "RBOX Axiom Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#rdfs
+<http://purl.org/oqo/model#rdfs> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/dqv#Metric> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Does the ontology correspond to the RDFS profile?"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "RDFS Compliance"@en ;
+                                 <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                 <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/rdfs-compliance> .
+
+
+###  http://purl.org/oqo/model#rule-count
+<http://purl.org/oqo/model#rule-count> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/dqv#Metric> ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Number of SWRL rules used."@en ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Rule Count"@en ;
+                                       <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                       <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#signature-entity-count
+<http://purl.org/oqo/model#signature-entity-count> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/ns/dqv#Metric> ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Total number of entities in signature, including classes and individuals."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Signature Entity Count"@en ;
+                                                   <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                   <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#syntax
+<http://purl.org/oqo/model#syntax> rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/ns/dqv#Metric> ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "What serialisation is used for the ontology?"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Ontology Syntax"@en ;
+                                   <http://www.w3.org/ns/dqv#expectedDataType> xsd:string ;
+                                   <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-representation> .
+
+
+###  http://purl.org/oqo/model#tautology-count
+<http://purl.org/oqo/model#tautology-count> rdf:type owl:NamedIndividual ,
+                                                     <http://www.w3.org/ns/dqv#Metric> ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Number of tautological axioms."@en ;
+                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Tautology Count"@en ;
+                                            <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                            <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#tbox-axiom-count
+<http://purl.org/oqo/model#tbox-axiom-count> rdf:type owl:NamedIndividual ,
+                                                      <http://www.w3.org/ns/dqv#Metric> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Number of TBOX axioms (without RBOX)."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "TBOX Axiom Count"@en ;
+                                             <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                             <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#tbox-nominals
+<http://purl.org/oqo/model#tbox-nominals> rdf:type owl:NamedIndividual ,
+                                                   <http://www.w3.org/ns/dqv#Metric> ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Number of TBOX axioms with nominals."@en ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "TBOX Nominals Count"@en ;
+                                          <http://www.w3.org/ns/dqv#expectedDataType> xsd:boolean ;
+                                          <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#tboxrbox-axiom-count
+<http://purl.org/oqo/model#tboxrbox-axiom-count> rdf:type owl:NamedIndividual ,
+                                                          <http://www.w3.org/ns/dqv#Metric> ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Number of TBOX axioms (with RBOX)."@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "TBOX+RBOX Axiom Count"@en ;
+                                                 <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                 <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  http://purl.org/oqo/model#undecl-entity-count
+<http://purl.org/oqo/model#undecl-entity-count> rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/dqv#Metric> ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Number of undeclared entities."@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Undeclared Entity Count"@en ;
+                                                <http://www.w3.org/ns/dqv#expectedDataType> xsd:integer ;
+                                                <http://www.w3.org/ns/dqv#inDimension> <http://purl.org/oqo/ontology-size> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

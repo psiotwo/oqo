@@ -1,0 +1,610 @@
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix oqo: <http://purl.org/oqo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix oqo-model: <http://purl.org/oqo/model#> .
+@base <http://purl.org/oqo> .
+
+<http://purl.org/oqo> rdf:type owl:Ontology ;
+    owl:versionIRI <http://purl.org/oqo/version/1.0.0> ;
+    rdfs:seeAlso <https://www.w3.org/ns/dqv> ;
+    <http://purl.org/dc/terms/description>
+        "A DQV-based ontology to describe the quality of ontologies, including metrics and dimensions."@en ;
+    <http://purl.org/dc/terms/title> "Ontology Quality Ontology"@en ;
+    owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/oqo/failed-count
+oqo:failed-count rdf:type owl:DatatypeProperty ;
+    rdfs:domain oqo-model:ontology-set-metadata ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Failed count"@en .
+
+###  http://purl.org/oqo/ontology-count
+oqo:ontology-count rdf:type owl:DatatypeProperty ;
+    rdfs:domain oqo-model:ontology-set-metadata ;
+    rdfs:range xsd:integer ;
+    rdfs:label "Ontology count"@en .
+
+###  http://purl.org/oqo/model#ontology-set-metadata
+oqo-model:ontology-set-metadata rdf:type owl:Class ;
+    rdfs:comment "Metadata describing the results of processing over a set of ontologies"@en ;
+    rdfs:label "Ontology Set Metadata"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/oqo/compliance
+oqo:compliance rdf:type
+        owl:NamedIndividual,
+        dqv:Category ;
+    skos:definition "Category that groups dimensions measuring the ontology's compliance."@en ;
+    skos:prefLabel "Compliance"@en .
+
+
+###  http://purl.org/oqo/cycle-detection
+oqo:cycle-detection rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:structuralQuality ;
+    skos:definition "Dimension that measures the presence or absence of cycles in the ontology."@en ;
+    skos:prefLabel "Cycle Detection"@en .
+
+
+###  http://purl.org/oqo/ontology-metadata
+oqo:ontology-metadata rdf:type
+        owl:NamedIndividual,
+        dqv:Category ;
+    skos:definition
+        "Category that groups dimensions related to the metadata of the ontology, such as its ID and other identifying features."@en ;
+    skos:prefLabel "Ontology Metadata"@en .
+
+
+###  http://purl.org/oqo/ontology-metadata-dimension
+oqo:ontology-metadata-dimension rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:ontologyMetadata ;
+    skos:definition "Dimension that measures key metadata characteristics of the ontology, such as its ID."@en ;
+    skos:prefLabel "Ontology Metadata"@en .
+
+
+###  http://purl.org/oqo/ontology-representation
+oqo:ontology-representation rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:representation ;
+    skos:definition "Dimension measuring the representation format of the ontology, including serialization and syntax."@en ;
+    skos:prefLabel "Ontology Representation"@en .
+
+
+###  http://purl.org/oqo/ontology-size
+oqo:ontology-size rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:structuralQuality ;
+    skos:definition "Measures the size of the ontology in terms of axioms and entities."@en ;
+    skos:prefLabel "Ontology Size"@en .
+
+
+###  http://purl.org/oqo/ontologyMetadata
+oqo:ontologyMetadata rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/oqo/owl2-compliance
+oqo:owl2-compliance rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:compliance ;
+    skos:definition
+        "Dimension measuring the compliance of the ontology with different OWL2 profiles (DL, EL, QL, RL, Full)."@en ;
+    skos:prefLabel "Profile Compliance"@en .
+
+
+###  http://purl.org/oqo/rdfs-compliance
+oqo:rdfs-compliance rdf:type
+        owl:NamedIndividual,
+        dqv:Dimension ;
+    dqv:inCategory oqo:compliance ;
+    skos:definition "Dimension measuring the compliance of the ontology with the RDFS profile."@en ;
+    skos:prefLabel "RDFS Compliance"@en .
+
+
+###  http://purl.org/oqo/representation
+oqo:representation rdf:type
+        owl:NamedIndividual,
+        dqv:Category ;
+    skos:definition
+        "Category that groups dimensions related to the representation and structure of the ontology, including syntax and serialization."@en ;
+    skos:prefLabel "Ontology Representation"@en .
+
+
+###  http://purl.org/oqo/structural-quality
+oqo:structural-quality rdf:type
+        owl:NamedIndividual,
+        dqv:Category ;
+    skos:definition
+        "Category that groups dimensions measuring size and structural complexity of an ontology. This category includes aspects like the number of axioms, entities, and logical constructs in the ontology."@en ;
+    skos:prefLabel "Structural Quality"@en .
+
+
+###  http://purl.org/oqo/structuralQuality
+oqo:structuralQuality rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/oqo/model#abox-axiom-count
+oqo-model:abox-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of axioms in the ABox"@en ;
+    skos:prefLabel "ABox Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#annotation-property-count
+oqo-model:annotation-property-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of annotation properties"@en ;
+    skos:prefLabel "Annotation Property Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#assert-n-subclass-avg
+oqo-model:assert-n-subclass-avg rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Average number of (asserted) subclasses per class"@en ;
+    skos:prefLabel "Average Asserted Subclasses"@en ;
+    dqv:expectedDataType xsd:double .
+
+
+###  http://purl.org/oqo/model#assert-n-superclass-avg
+oqo-model:assert-n-superclass-avg rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Average number of (asserted) superclasses per class"@en ;
+    skos:prefLabel "Average Asserted Superclasses"@en ;
+    dqv:expectedDataType xsd:double .
+
+
+###  http://purl.org/oqo/model#ax-complexrhs-count
+oqo-model:ax-complexrhs-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of axioms with a complex right hand side"@en ;
+    skos:prefLabel "Complex RHS Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#axiom-count
+oqo-model:axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of axioms"@en ;
+    skos:prefLabel "Total Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#axiom-length-max
+oqo-model:axiom-length-max rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Longest axiom in terms of number of entities used (including duplicate uses)."@en ;
+    skos:prefLabel "Max Axiom Length"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#axiom-type-count
+oqo-model:axiom-type-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of axioms of a specific type, such as SubClassOf"@en ;
+    skos:prefLabel "Axiom Type Count"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#axiom-types
+oqo-model:axiom-types rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Indicates the presence of an axiom type in the ontology."@en ;
+    skos:prefLabel "Axiom Types Presence"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#certain-cycle
+oqo-model:certain-cycle rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:cycle-detection ;
+    skos:definition "If true, there is a definite cycle in the ontology. If false, cyclicity is unknown (experimental)."@en ;
+    skos:prefLabel "Definite Cycle Detection"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#class-count
+oqo-model:class-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of classes in the ontology"@en ;
+    skos:prefLabel "Class Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#class-sgl-subcl-count
+oqo-model:class-sgl-subcl-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of super-classes which have more than one subclass."@en ;
+    skos:prefLabel "Superclass with Multiple Subclasses Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#constructs
+oqo-model:constructs rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Logical constructs used"@en ;
+    skos:prefLabel "Logical Constructs Used"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#dataproperty-count
+oqo-model:dataproperty-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of distinct data properties."@en ;
+    skos:prefLabel "Data Property Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#datatypes-builtin
+oqo-model:datatypes-builtin rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Datatypes used from the built-in datatype map (like XSD schema datatypes)."@en ;
+    skos:prefLabel "Built-in Datatypes Used"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#datatypes-count
+oqo-model:datatypes-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total number of distinct datatypes."@en ;
+    skos:prefLabel "Datatype Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#dt-builtin-count
+oqo-model:dt-builtin-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total number of distinct built-in datatypes."@en ;
+    skos:prefLabel "Built-in Datatype Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#dt-notbuiltin-count
+oqo-model:dt-notbuiltin-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total number of distinct custom (not built-in) datatypes."@en ;
+    skos:prefLabel "Custom Datatype Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#gci-count
+oqo-model:gci-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total count of GCI axioms."@en ;
+    skos:prefLabel "General Class Inclusion (GCI) Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#gci-hidden-count
+oqo-model:gci-hidden-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total count of hidden GCIs."@en ;
+    skos:prefLabel "Hidden GCI Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#individual-count
+oqo-model:individual-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of individuals."@en ;
+    skos:prefLabel "Individual Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#instance-per-class-avg
+oqo-model:instance-per-class-avg rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Average number of individuals per class."@en ;
+    skos:prefLabel "Average Individuals per Class"@en ;
+    dqv:expectedDataType xsd:double .
+
+
+###  http://purl.org/oqo/model#logical-axiom-count
+oqo-model:logical-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of logical axioms in ontology"@en ;
+    skos:prefLabel "Logical Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#most-freq-concept
+oqo-model:most-freq-concept rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Most frequently used class."@en ;
+    skos:prefLabel "Most Frequent Concept"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#multiple-inheritance-count
+oqo-model:multiple-inheritance-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of classes with multiple inheritance."@en ;
+    skos:prefLabel "Multiple Inheritance Class Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#named-supercl-count-max
+oqo-model:named-supercl-count-max rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Maximum number of named superclasses."@en ;
+    skos:prefLabel "Max Named Superclasses"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#namespace-axiom-count
+oqo-model:namespace-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of axioms using at least one term in a namespace."@en ;
+    skos:prefLabel "Namespace Axiom Count"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#namespace-entity-count
+oqo-model:namespace-entity-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of distinct entities used from a namespace."@en ;
+    skos:prefLabel "Namespace Entity Count"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#obj-property-count
+oqo-model:obj-property-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of object properties."@en ;
+    skos:prefLabel "Object Property Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#ontology-anno-count
+oqo-model:ontology-anno-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of ontology annotations."@en ;
+    skos:prefLabel "Ontology Annotation Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#ontology-id
+oqo-model:ontology-id rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-metadata-dimension ;
+    skos:definition "The ontology id."@en ;
+    skos:prefLabel "Ontology ID"@en ;
+    dqv:expectedDataType xsd:anyURI .
+
+
+###  http://purl.org/oqo/model#owl2
+oqo-model:owl2 rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Does the ontology correspond to the OWL2 Full profile?"@en ;
+    skos:prefLabel "OWL2 Full Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#owl2-dl
+oqo-model:owl2-dl rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Does the ontology correspond to the OWL2 DL profile?"@en ;
+    skos:prefLabel "OWL2 DL Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#owl2-el
+oqo-model:owl2-el rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Does the ontology correspond to the OWL2 EL profile?"@en ;
+    skos:prefLabel "OWL2 EL Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#owl2-ql
+oqo-model:owl2-ql rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Does the ontology correspond to the OWL2 QL profile?"@en ;
+    skos:prefLabel "OWL2 QL Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#owl2-rl
+oqo-model:owl2-rl rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Does the ontology correspond to the OWL2 RL profile?"@en ;
+    skos:prefLabel "OWL2 RL Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#owl2dl-profile-violation
+oqo-model:owl2dl-profile-violation rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:owl2-compliance ;
+    skos:definition "Counts of OWL2 DL profile violations."@en ;
+    skos:prefLabel "OWL2 DL Profile Violation Count"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#rbox-axiom-count
+oqo-model:rbox-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "How many axioms in the RBOX?"@en ;
+    skos:prefLabel "RBOX Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#rdfs
+oqo-model:rdfs rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:rdfs-compliance ;
+    skos:definition "Does the ontology correspond to the RDFS profile?"@en ;
+    skos:prefLabel "RDFS Compliance"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#rule-count
+oqo-model:rule-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of SWRL rules used."@en ;
+    skos:prefLabel "Rule Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#signature-entity-count
+oqo-model:signature-entity-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Total number of entities in signature, including classes and individuals."@en ;
+    skos:prefLabel "Signature Entity Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#syntax
+oqo-model:syntax rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-representation ;
+    skos:definition "What serialisation is used for the ontology?"@en ;
+    skos:prefLabel "Ontology Syntax"@en ;
+    dqv:expectedDataType xsd:string .
+
+
+###  http://purl.org/oqo/model#tautology-count
+oqo-model:tautology-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of tautological axioms."@en ;
+    skos:prefLabel "Tautology Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#tbox-axiom-count
+oqo-model:tbox-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of TBOX axioms (without RBOX)."@en ;
+    skos:prefLabel "TBOX Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#tbox-nominals
+oqo-model:tbox-nominals rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of TBOX axioms with nominals."@en ;
+    skos:prefLabel "TBOX Nominals Count"@en ;
+    dqv:expectedDataType xsd:boolean .
+
+
+###  http://purl.org/oqo/model#tboxrbox-axiom-count
+oqo-model:tboxrbox-axiom-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of TBOX axioms (with RBOX)."@en ;
+    skos:prefLabel "TBOX+RBOX Axiom Count"@en ;
+    dqv:expectedDataType xsd:integer .
+
+
+###  http://purl.org/oqo/model#undecl-entity-count
+oqo-model:undecl-entity-count rdf:type
+        owl:NamedIndividual,
+        dqv:Metric ;
+    dqv:inDimension oqo:ontology-size ;
+    skos:definition "Number of undeclared entities."@en ;
+    skos:prefLabel "Undeclared Entity Count"@en ;
+    dqv:expectedDataType xsd:integer .

@@ -1,0 +1,1192 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/oqo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A DQV-based ontology to describe the quality of ontologies, including metrics and dimensions."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Quality Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.w3.org/ns/dqv"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://purl.org/oqo/version/1.0.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/compliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Category"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category that groups dimensions measuring the ontology's compliance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/cycle-detection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dimension that measures the presence or absence of cycles in the ontology."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Cycle Detection"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/structuralQuality"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/failed-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/oqo/model#ontology-set-metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Failed count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#abox-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of axioms in the ABox"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "ABox Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#annotation-property-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of annotation properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Annotation Property Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#assert-n-subclass-avg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Average number of (asserted) subclasses per class"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Average Asserted Subclasses"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#assert-n-superclass-avg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Average number of (asserted) superclasses per class"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Average Asserted Superclasses"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#ax-complexrhs-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of axioms with a complex right hand side"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Complex RHS Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of axioms"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Total Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#axiom-length-max",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Longest axiom in terms of number of entities used (including duplicate uses)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Max Axiom Length"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#axiom-type-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of axioms of a specific type, such as SubClassOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Axiom Type Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#axiom-types",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the presence of an axiom type in the ontology."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Axiom Types Presence"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#certain-cycle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "If true, there is a definite cycle in the ontology. If false, cyclicity is unknown (experimental)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Definite Cycle Detection"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/cycle-detection"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#class-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of classes in the ontology"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Class Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#class-sgl-subcl-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of super-classes which have more than one subclass."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Superclass with Multiple Subclasses Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#constructs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Logical constructs used"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Logical Constructs Used"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#dataproperty-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of distinct data properties."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Data Property Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#datatypes-builtin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Datatypes used from the built-in datatype map (like XSD schema datatypes)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Built-in Datatypes Used"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#datatypes-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total number of distinct datatypes."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Datatype Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#dt-builtin-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total number of distinct built-in datatypes."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Built-in Datatype Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#dt-notbuiltin-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total number of distinct custom (not built-in) datatypes."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Custom Datatype Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#gci-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total count of GCI axioms."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "General Class Inclusion (GCI) Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#gci-hidden-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total count of hidden GCIs."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hidden GCI Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#individual-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of individuals."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Individual Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#instance-per-class-avg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Average number of individuals per class."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Average Individuals per Class"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#logical-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of logical axioms in ontology"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Logical Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#most-freq-concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Most frequently used class."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Most Frequent Concept"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#multiple-inheritance-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of classes with multiple inheritance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Multiple Inheritance Class Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#named-supercl-count-max",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Maximum number of named superclasses."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Max Named Superclasses"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#namespace-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of axioms using at least one term in a namespace."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Namespace Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#namespace-entity-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of distinct entities used from a namespace."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Namespace Entity Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#obj-property-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of object properties."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Object Property Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#ontology-anno-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of ontology annotations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Annotation Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#ontology-id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The ontology id."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology ID"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-metadata-dimension"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#ontology-set-metadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Metadata describing the results of processing over a set of ontologies"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Set Metadata"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the OWL2 Full profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 Full Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2-dl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the OWL2 DL profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 DL Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2-el",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the OWL2 EL profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 EL Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2-ql",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the OWL2 QL profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 QL Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2-rl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the OWL2 RL profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 RL Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#owl2dl-profile-violation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Counts of OWL2 DL profile violations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "OWL2 DL Profile Violation Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/owl2-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#rbox-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "How many axioms in the RBOX?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "RBOX Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#rdfs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Does the ontology correspond to the RDFS profile?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "RDFS Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/rdfs-compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#rule-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of SWRL rules used."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Rule Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#signature-entity-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Total number of entities in signature, including classes and individuals."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Signature Entity Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#syntax",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "What serialisation is used for the ontology?"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Syntax"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-representation"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#tautology-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of tautological axioms."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Tautology Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#tbox-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of TBOX axioms (without RBOX)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "TBOX Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#tbox-nominals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of TBOX axioms with nominals."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "TBOX Nominals Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#tboxrbox-axiom-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of TBOX axioms (with RBOX)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "TBOX+RBOX Axiom Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/model#undecl-entity-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of undeclared entities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Undeclared Entity Count"
+  } ],
+  "http://www.w3.org/ns/dqv#expectedDataType" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/dqv#inDimension" : [ {
+    "@id" : "http://purl.org/oqo/ontology-size"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontology-count",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/oqo/model#ontology-set-metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ontology count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontology-metadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Category"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category that groups dimensions related to the metadata of the ontology, such as its ID and other identifying features."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Metadata"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontology-metadata-dimension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dimension that measures key metadata characteristics of the ontology, such as its ID."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Metadata"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/ontologyMetadata"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontology-representation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dimension measuring the representation format of the ontology, including serialization and syntax."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Representation"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/representation"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontology-size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Measures the size of the ontology in terms of axioms and entities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Size"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/structuralQuality"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/ontologyMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://purl.org/oqo/owl2-compliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dimension measuring the compliance of the ontology with different OWL2 profiles (DL, EL, QL, RL, Full)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Profile Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/rdfs-compliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Dimension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dimension measuring the compliance of the ontology with the RDFS profile."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "RDFS Compliance"
+  } ],
+  "http://www.w3.org/ns/dqv#inCategory" : [ {
+    "@id" : "http://purl.org/oqo/compliance"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/representation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Category"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category that groups dimensions related to the representation and structure of the ontology, including syntax and serialization."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Representation"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/structural-quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dqv#Category"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Category that groups dimensions measuring size and structural complexity of an ontology. This category includes aspects like the number of axioms, entities, and logical constructs in the ontology."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Structural Quality"
+  } ]
+}, {
+  "@id" : "http://purl.org/oqo/structuralQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#Category",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#Dimension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#Metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#expectedDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#inCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#inDimension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
