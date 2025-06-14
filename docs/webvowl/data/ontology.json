@@ -1,0 +1,1883 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/dqv", "http://www.w3.org/2001/XMLSchema", "http://purl.org/oqo", "http://purl.org/oqo/model" ],
+    "title" : {
+      "en" : "Ontology Quality Ontology"
+    },
+    "iri" : "http://purl.org/oqo",
+    "version" : "1.0.0",
+    "description" : {
+      "en" : "A DQV-based ontology to describe the quality of ontologies, including metrics and dimensions."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Ontology Quality Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/dqv",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/dqv#Dimension",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dimension"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/oqo/ontology-metadata-dimension",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontologyMetadata",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Metadata",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Dimension that measures key metadata characteristics of the ontology, such as its ID.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-metadata-dimension"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/rdfs-compliance",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/compliance",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "RDFS Compliance",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Dimension measuring the compliance of the ontology with the RDFS profile.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rdfs-compliance"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/cycle-detection",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/structuralQuality",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Cycle Detection",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Dimension that measures the presence or absence of cycles in the ontology.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "cycle-detection"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/ontology-representation",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Representation",
+          "type" : "label"
+        } ],
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/representation",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Dimension measuring the representation format of the ontology, including serialization and syntax.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-representation"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/ontology-size",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/structuralQuality",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Size",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Measures the size of the ontology in terms of axioms and entities.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-size"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/owl2-compliance",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Profile Compliance",
+          "type" : "label"
+        } ],
+        "inCategory" : [ {
+          "identifier" : "inCategory",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/compliance",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Dimension measuring the compliance of the ontology with different OWL2 profiles (DL, EL, QL, RL, Full).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2-compliance"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://purl.org/oqo/model#ontology-set-metadata",
+    "baseIri" : "http://purl.org/oqo/model",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ontology-set-metadata",
+      "en" : "Ontology Set Metadata"
+    },
+    "comment" : {
+      "en" : "Metadata describing the results of processing over a set of ontologies"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#Metric",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metric"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/oqo/model#individual-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Individual Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of individuals.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "individual-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#tbox-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "TBOX Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of TBOX axioms (without RBOX).",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tbox-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#axiom-type-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Axiom Type Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of axioms of a specific type, such as SubClassOf",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "axiom-type-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#tautology-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Tautology Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of tautological axioms.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tautology-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#named-supercl-count-max",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Max Named Superclasses",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Maximum number of named superclasses.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "named-supercl-count-max"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#class-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Class Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of classes in the ontology",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "class-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#gci-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "General Class Inclusion (GCI) Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total count of GCI axioms.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "gci-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#constructs",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Logical Constructs Used",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Logical constructs used",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "constructs"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#instance-per-class-avg",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Average Individuals per Class",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#double",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Average number of individuals per class.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "instance-per-class-avg"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#axiom-length-max",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Max Axiom Length",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Longest axiom in terms of number of entities used (including duplicate uses).",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "axiom-length-max"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#datatypes-builtin",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Built-in Datatypes Used",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Datatypes used from the built-in datatype map (like XSD schema datatypes).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "datatypes-builtin"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#gci-hidden-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Hidden GCI Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total count of hidden GCIs.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "gci-hidden-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2-dl",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 DL Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the OWL2 DL profile?",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2-dl"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#ontology-anno-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Annotation Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of ontology annotations.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-anno-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#rdfs",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "RDFS Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/rdfs-compliance",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the RDFS profile?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rdfs"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#assert-n-superclass-avg",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Average Asserted Superclasses",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Average number of (asserted) superclasses per class",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#double",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "assert-n-superclass-avg"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#syntax",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Syntax",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-representation",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "What serialisation is used for the ontology?",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "syntax"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#tboxrbox-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "TBOX+RBOX Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of TBOX axioms (with RBOX).",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tboxrbox-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#datatypes-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Datatype Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total number of distinct datatypes.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "datatypes-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#dt-notbuiltin-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Custom Datatype Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total number of distinct custom (not built-in) datatypes.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "dt-notbuiltin-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2-ql",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 QL Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the OWL2 QL profile?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2-ql"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#certain-cycle",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Definite Cycle Detection",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/cycle-detection",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "If true, there is a definite cycle in the ontology. If false, cyclicity is unknown (experimental).",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "certain-cycle"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#annotation-property-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Annotation Property Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of annotation properties",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "annotation-property-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#rule-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Rule Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of SWRL rules used.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rule-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#rbox-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "RBOX Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "How many axioms in the RBOX?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rbox-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#abox-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "ABox Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of axioms in the ABox",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "abox-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#assert-n-subclass-avg",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Average Asserted Subclasses",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Average number of (asserted) subclasses per class",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#double",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "assert-n-subclass-avg"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#class-sgl-subcl-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Superclass with Multiple Subclasses Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of super-classes which have more than one subclass.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "class-sgl-subcl-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2dl-profile-violation",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 DL Profile Violation Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Counts of OWL2 DL profile violations.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2dl-profile-violation"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#dataproperty-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Data Property Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of distinct data properties.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "dataproperty-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2-el",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 EL Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the OWL2 EL profile?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2-el"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#axiom-types",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Axiom Types Presence",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Indicates the presence of an axiom type in the ontology.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "axiom-types"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Total Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of axioms",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#undecl-entity-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Undeclared Entity Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of undeclared entities.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "undecl-entity-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#most-freq-concept",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Most Frequent Concept",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Most frequently used class.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "most-freq-concept"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#ax-complexrhs-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Complex RHS Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of axioms with a complex right hand side",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ax-complexrhs-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#dt-builtin-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Built-in Datatype Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total number of distinct built-in datatypes.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "dt-builtin-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#namespace-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Namespace Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of axioms using at least one term in a namespace.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "namespace-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#tbox-nominals",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "TBOX Nominals Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of TBOX axioms with nominals.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "tbox-nominals"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2-rl",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 RL Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the OWL2 RL profile?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2-rl"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#multiple-inheritance-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Multiple Inheritance Class Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of classes with multiple inheritance.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "multiple-inheritance-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#signature-entity-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Signature Entity Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Total number of entities in signature, including classes and individuals.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "signature-entity-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#obj-property-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Object Property Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of object properties.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "obj-property-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#namespace-entity-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Namespace Entity Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#string",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of distinct entities used from a namespace.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "namespace-entity-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#logical-axiom-count",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Logical Axiom Count",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-size",
+          "type" : "iri"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Number of logical axioms in ontology",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "logical-axiom-count"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#owl2",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "OWL2 Full Compliance",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/owl2-compliance",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Does the ontology correspond to the OWL2 Full profile?",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "owl2"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/model#ontology-id",
+      "baseIri" : "http://purl.org/oqo/model",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology ID",
+          "type" : "label"
+        } ],
+        "inDimension" : [ {
+          "identifier" : "inDimension",
+          "language" : "undefined",
+          "value" : "http://purl.org/oqo/ontology-metadata-dimension",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "The ontology id.",
+          "type" : "label"
+        } ],
+        "expectedDataType" : [ {
+          "identifier" : "expectedDataType",
+          "language" : "undefined",
+          "value" : "http://www.w3.org/2001/XMLSchema#anyURI",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-id"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#Category",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Category"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/oqo/representation",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Representation",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Category that groups dimensions related to the representation and structure of the ontology, including syntax and serialization.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "representation"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/compliance",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Compliance",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Category that groups dimensions measuring the ontology's compliance.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "compliance"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/ontology-metadata",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Ontology Metadata",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Category that groups dimensions related to the metadata of the ontology, such as its ID and other identifying features.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ontology-metadata"
+      }
+    }, {
+      "iri" : "http://purl.org/oqo/structural-quality",
+      "baseIri" : "http://purl.org/oqo",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Structural Quality",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Category that groups dimensions measuring size and structural complexity of an ontology. This category includes aspects like the number of axioms, entities, and logical constructs in the ontology.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "structural-quality"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/oqo/failed-count",
+    "baseIri" : "http://purl.org/oqo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "failed-count",
+      "en" : "Failed count"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://purl.org/oqo/ontology-count",
+    "baseIri" : "http://purl.org/oqo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "ontology-count",
+      "en" : "Ontology count"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "3"
+  } ]
+}
