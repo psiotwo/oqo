@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix oqo-model: <http://purl.org/oqo/model#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @base <http://purl.org/oqo> .
 
 <http://purl.org/oqo> rdf:type owl:Ontology ;
@@ -31,6 +32,12 @@ oqo:ontology-count rdf:type owl:DatatypeProperty ;
     rdfs:domain oqo-model:ontology-set-metadata ;
     rdfs:range xsd:integer ;
     rdfs:label "Ontology count"@en .
+
+###  http://purl.org/oqo/relates-to
+oqo:relates-to rdf:type owl:DatatypeProperty ;
+    rdfs:domain oqo-model:ontology-set-metadata ;
+    rdfs:range dcat:Dataset ;
+    rdfs:label "Metadata relates to a dataset"@en .
 
 ###  http://purl.org/oqo/model#ontology-set-metadata
 oqo-model:ontology-set-metadata rdf:type owl:Class ;
